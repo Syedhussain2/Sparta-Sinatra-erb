@@ -1,0 +1,10 @@
+<h1>KFC</h1>
+<% @food.each do |food| %>
+  <h1><%= food[:id] %></h1>
+  <h1><%= food[:title] %></h1>
+  <h1><%= food[:flavour] %></h1>
+  <a href="/food/<%= food[:id]%>">Go to show page</a>
+  <%food[:meal].each do |meal| %>
+    <h5><%= meal  %></h5>
+  <% end %>
+<% end %>
