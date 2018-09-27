@@ -1,0 +1,14 @@
+<h1>Option Page <%= @food[:title]  %></h1>
+<h3>Released <%= @food[:flavour]%></h3>
+<ul class="list-group">
+  <%@food[:meal].each do |meal| %>
+  <li class="list-group-item"><%= meal %></li>
+  <% end %>
+</ul>
+<a href="/food">back</a>
+<a href="/food/<%= @food[:id]%>/edit">Edit</a>
+
+<form class="" action="/food/<%= @food[:id] %>" method="post">
+  <input type="hidden" name="_hidden" value="Delete">
+  <input type="submit"  value="Delete">
+</form>

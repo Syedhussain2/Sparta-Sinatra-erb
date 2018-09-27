@@ -1,0 +1,18 @@
+<form action="/food/<%= @food[:id] %>" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" class="form-control" placeholder="Title" name="title" value = "<%= @food[:title] %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Flavour</label>
+    <input type="text" class="form-control" placeholder="Flavour"name="Flavour"value = "<%= @food[:flavour] %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Meal</label>
+    <input type="text"class="form-control" placeholder="meal"name="meal" value = "<%= @food[:meal].join ', ' %>">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+  <% if (@food[:id] != '')  %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end  %>
+</form>
