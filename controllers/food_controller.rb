@@ -23,7 +23,7 @@ class App < Sinatra::Base
       :id => 3,
       :title => 'Burger',
       :flavour => 'classic',
-      :meal => ['chips', 'Drink',]
+      :meal => ['chips', 'Drink', 'wings']
     }
   ]
   #INDEX
@@ -47,9 +47,9 @@ class App < Sinatra::Base
   post '/food' do
     id = $food.length + 1
     if params[:meal].include? ','
-      actors = params[:meal].split ','
+      meal = params[:meal].split ','
     else
-      actors = [params[:meal]]
+      meal = [params[:meal]]
     end
     newFood = {
       :id => id,

@@ -3,7 +3,7 @@
   <h1><%= food[:id] %></h1>
   <h1><%= food[:title] %></h1>
   <h1><%= food[:flavour] %></h1>
-  <a href="/food/<%= food[:id]%>">Go to show page</a>
+  <a href="/food/<%= food[:id]%>">Make it a meal</a>
   <%food[:meal].each do |meal| %>
     <h5><%= meal  %></h5>
   <% end %>
