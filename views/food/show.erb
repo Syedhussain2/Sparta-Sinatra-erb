@@ -2,10 +2,9 @@
 <h3>Released <%= @food[:flavour]%></h3>
 <ul class="list-group">
   <%@food[:meal].each do |meal| %>
-  <li class="list-group-item">˘<%= meal %></li>
+  <li class="list-group-item"><%= meal %></li>
   <% end %>
 </ul>
-<a href="/food/<%= @food[:id]%>">Go to show page</a>
 <a href="/food">back</a>
 <a href="/food/<%= @food[:id]%>/edit">Edit</a>
 
